@@ -22,7 +22,7 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section className="relative min-h-[60vh] bg-[#0F172A] flex items-center overflow-hidden">
-        <div className="absolute inset-0 mesh-gradient opacity-50" />
+        
         <div className="container-wide relative z-10 pt-28 pb-20">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold mb-6">

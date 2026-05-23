@@ -49,10 +49,12 @@ export default function ProcessTimeline() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-4 border border-blue-100">
-            How It Works
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-heading text-slate-900 mb-4 leading-tight">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-0.5 bg-[#B8952A]" />
+            <span className="text-[#B8952A] text-xs font-bold tracking-widest uppercase">How It Works</span>
+            <div className="w-8 h-0.5 bg-[#B8952A]" />
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-heading text-[#0F172A] mb-4 leading-tight">
             Your Journey{" "}
             <span className="text-gradient-blue">Starts Here</span>
           </h2>
@@ -64,7 +66,7 @@ export default function ProcessTimeline() {
         {/* Timeline */}
         <div className="relative">
           {/* Connecting line - desktop */}
-          <div className="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-slate-500" />
+          <div className="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-px bg-slate-300" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
             {steps.map((step, i) => {

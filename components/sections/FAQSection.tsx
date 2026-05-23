@@ -59,10 +59,11 @@ export default function FAQSection() {
             transition={{ duration: 0.6 }}
             className="lg:sticky lg:top-32"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-5 border border-blue-100">
-              FAQ
-            </span>
-            <h2 className="text-4xl lg:text-5xl font-heading text-slate-900 mb-5 leading-tight">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-8 h-0.5 bg-[#B8952A]" />
+              <span className="text-[#B8952A] text-xs font-bold tracking-widest uppercase">FAQ</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-heading text-[#0F172A] mb-5 leading-tight">
               Frequently Asked{" "}
               <span className="text-gradient-blue">Questions</span>
             </h2>
@@ -79,7 +80,7 @@ export default function FAQSection() {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-700 text-white text-sm font-semibold rounded-lg hover:bg-blue-800 transition-colors"
               >
                 Talk to an Advisor
               </a>

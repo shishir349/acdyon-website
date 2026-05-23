@@ -44,8 +44,8 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "py-3 bg-white/90 backdrop-blur-xl border-b border-slate-200/60 shadow-sm"
-            : "py-5 bg-transparent"
+            ? "py-3 bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm"
+            : "py-5 bg-white/80 backdrop-blur-md border-b border-slate-200/60"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
@@ -54,11 +54,7 @@ export default function Navbar() {
             <div className="w-9 h-9 rounded-lg gradient-royal flex items-center justify-center shadow-glow-blue">
               <span className="text-white font-bold text-base font-heading">A</span>
             </div>
-            <span
-              className={`text-xl font-heading font-bold tracking-tight transition-colors ${
-                scrolled ? "text-slate-900" : "text-white"
-              }`}
-            >
+            <span className="text-xl font-heading font-bold tracking-tight text-[#0F172A]">
               AcdyOn
             </span>
           </Link>
@@ -74,11 +70,7 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    scrolled
-                      ? "text-slate-700 hover:text-blue-700 hover:bg-blue-50"
-                      : "text-white/90 hover:text-white hover:bg-white/10"
-                  }`}
+                  className="flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200"
                 >
                   {link.label}
                   {link.children && (
@@ -127,11 +119,7 @@ export default function Navbar() {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors ${
-              scrolled
-                ? "text-slate-700 hover:bg-slate-100"
-                : "text-white hover:bg-white/10"
-            }`}
+            className="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

@@ -2,82 +2,85 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function FinalCTA() {
   return (
     <section className="relative py-28 bg-[#0F172A] overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 mesh-gradient opacity-40" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-blue-600/15 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#D4AF37]/8 rounded-full blur-3xl" />
-        <div className="absolute top-0 left-0 w-64 h-64 bg-blue-800/20 rounded-full blur-3xl" />
-      </div>
-
-      {/* Grid overlay */}
+      {/* Institutional background — subtle diagonal lines only, no glows */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
+          backgroundImage: `repeating-linear-gradient(
+            -55deg,
+            #ffffff,
+            #ffffff 1px,
+            transparent 1px,
+            transparent 60px
+          )`,
         }}
       />
 
+      {/* Gold accent rule at top */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-[#B8952A]" />
+
       <div className="relative z-10 container-wide text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className="max-w-3xl mx-auto space-y-8"
         >
-          {/* Label */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Your Next Chapter Starts Now</span>
+          {/* Eyebrow */}
+          <div className="flex items-center justify-center gap-3">
+            <div className="w-8 h-0.5 bg-[#B8952A]" />
+            <span className="text-[#B8952A] text-xs font-bold tracking-widest uppercase">
+              Your Next Chapter
+            </span>
+            <div className="w-8 h-0.5 bg-[#B8952A]" />
           </div>
 
           {/* Headline */}
-          <h2 className="text-4xl lg:text-6xl font-heading text-white leading-tight">
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-heading text-white leading-tight">
             Build Your Future With{" "}
             <span className="text-gradient-gold">Global Learning</span>
-            {" & Recognition"}
+            {" "}& Recognition
           </h2>
 
           {/* Subtext */}
           <p className="text-slate-400 text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto">
-            This is where ambitious professionals go to elevate their career, authority, and future. Join 5,000+ global learners who chose AcdyOn.
+            This is where ambitious professionals come to elevate their career, authority, and global credibility. Join 5,000+ learners across 18+ countries.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <Link
               href="/consultation"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-blue-500/30 hover:shadow-xl text-base group"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-blue-700 hover:bg-blue-600 text-white font-semibold rounded-lg transition-all duration-200 shadow-card hover:shadow-card-hover text-base group"
             >
               Book Free Consultation
               <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
             </Link>
             <Link
               href="/programs"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200 text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold border border-white/20 hover:border-white/40 rounded-lg transition-all duration-200 text-base hover:bg-white/5"
             >
               Explore Programs
             </Link>
           </div>
 
-          {/* Trust row */}
-          <div className="flex flex-wrap items-center justify-center gap-6 pt-6">
+          {/* Trust indicators */}
+          <div className="flex flex-wrap items-center justify-center gap-8 pt-6 border-t border-white/10">
             {[
-              "No upfront commitment",
-              "Free first consultation",
-              "18+ countries",
-              "5,000+ learners",
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-2 text-slate-400 text-sm">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-400" />
-                {item}
+              { value: "Free", label: "First consultation" },
+              { value: "18+", label: "Countries" },
+              { value: "5,000+", label: "Learners" },
+              { value: "4.9★", label: "Avg. rating" },
+            ].map(({ value, label }) => (
+              <div key={label} className="text-center">
+                <div className="text-white font-heading font-bold text-lg">{value}</div>
+                <div className="text-slate-500 text-xs">{label}</div>
               </div>
             ))}
           </div>

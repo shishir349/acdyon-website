@@ -38,7 +38,7 @@ export default function HonoraryRecognitionPage() {
     <>
       {/* Hero */}
       <section className="relative bg-[#0F172A] pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 mesh-gradient opacity-50" />
+        
         <div className="absolute top-1/2 right-1/4 w-80 h-80 bg-yellow-500/5 rounded-full blur-3xl" />
         <div className="container-wide relative z-10">
           <div className="max-w-3xl">

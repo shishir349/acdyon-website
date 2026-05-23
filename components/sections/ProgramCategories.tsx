@@ -8,32 +8,32 @@ const programs = [
   {
     icon: Bot,
     title: "AI & Automation",
-    description: "Master agentic AI, no-code automation, and intelligent workflows. Build real projects and stay ahead in the AI economy.",
+    description: "An executive program equipping leaders with the skills to leverage AI, design intelligent workflows, and drive business transformation.",
     href: "/ai-courses",
-    badge: "Trending",
-    color: "bg-blue-50 text-blue-600 border-blue-100",
-    iconBg: "bg-blue-600",
-    glow: "group-hover:shadow-blue-500/20",
+    badge: "Flagship",
+    color: "bg-blue-50 text-blue-800 border-blue-100",
+    iconBg: "bg-blue-700",
+    glow: "",
   },
   {
     icon: GraduationCap,
     title: "Doctoral Programs",
     description: "Flexible doctoral pathways designed for working professionals. Research-driven, globally recognized, and career-accelerating.",
     href: "/doctoral-programs",
-    badge: "Premium",
-    color: "bg-slate-50 text-slate-700 border-slate-100",
-    iconBg: "bg-slate-800",
-    glow: "group-hover:shadow-slate-500/20",
+    badge: "Academic",
+    color: "bg-slate-100 text-slate-700 border-slate-200",
+    iconBg: "bg-[#0F172A]",
+    glow: "",
   },
   {
     icon: Award,
     title: "Honorary Recognition",
-    description: "International honorary doctorate and recognition programs for leaders who have made extraordinary contributions to their fields.",
+    description: "International honorary doctorate programs for leaders who have made extraordinary contributions to their field and society.",
     href: "/honorary-recognition",
-    badge: "Exclusive",
-    color: "bg-yellow-50 text-yellow-700 border-yellow-100",
-    iconBg: "bg-[#D4AF37]",
-    glow: "group-hover:shadow-yellow-500/20",
+    badge: "Distinction",
+    color: "bg-amber-50 text-amber-800 border-amber-100",
+    iconBg: "bg-[#B8952A]",
+    glow: "",
   },
   {
     icon: Briefcase,
@@ -41,19 +41,19 @@ const programs = [
     description: "High-impact certifications for leaders, managers, and executives across strategy, leadership, finance, and innovation.",
     href: "/programs",
     badge: "Executive",
-    color: "bg-indigo-50 text-indigo-700 border-indigo-100",
-    iconBg: "bg-indigo-600",
-    glow: "group-hover:shadow-indigo-500/20",
+    color: "bg-slate-100 text-slate-700 border-slate-200",
+    iconBg: "bg-slate-700",
+    glow: "",
   },
   {
     icon: Building2,
     title: "Corporate Training",
-    description: "Tailored learning solutions for organizations. Upskill teams with AI, leadership, and future-focused skills at scale.",
+    description: "Tailored organizational learning programs that upskill entire teams in AI, leadership, and future-ready capabilities at scale.",
     href: "/programs",
     badge: "Enterprise",
-    color: "bg-cyan-50 text-cyan-700 border-cyan-100",
-    iconBg: "bg-cyan-600",
-    glow: "group-hover:shadow-cyan-500/20",
+    color: "bg-slate-100 text-slate-700 border-slate-200",
+    iconBg: "bg-slate-600",
+    glow: "",
   },
 ];
 
@@ -69,10 +69,12 @@ export default function ProgramCategories() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-4 border border-blue-100">
-            Our Programs
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-heading text-slate-900 mb-4 leading-tight">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-0.5 bg-[#B8952A]" />
+            <span className="text-[#B8952A] text-xs font-bold tracking-widest uppercase">Our Programs</span>
+            <div className="w-8 h-0.5 bg-[#B8952A]" />
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-heading text-[#0F172A] mb-4 leading-tight">
             World-Class Learning,{" "}
             <span className="text-gradient-blue">Globally Recognized</span>
           </h2>
@@ -92,7 +94,7 @@ export default function ProgramCategories() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`group relative bg-white border border-slate-200 rounded-2xl p-7 hover:border-slate-300 transition-all duration-300 hover:shadow-xl ${program.glow} cursor-pointer ${i === 2 ? "lg:col-span-1" : ""}`}
+                className={`group relative bg-white border border-slate-200 rounded-xl p-7 hover:border-blue-200 transition-all duration-300 hover:shadow-card-hover cursor-pointer ${i === 2 ? "lg:col-span-1" : ""}`}
               >
                 {/* Badge */}
                 <div className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold mb-5 border ${program.color}`}>
@@ -100,8 +102,8 @@ export default function ProgramCategories() {
                 </div>
 
                 {/* Icon */}
-                <div className={`w-12 h-12 rounded-xl ${program.iconBg} flex items-center justify-center mb-5 shadow-md group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="w-6 h-6 text-white" />
+                <div className={`w-12 h-12 rounded-lg ${program.iconBg} flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-200`}>
+                  <Icon className="w-5.5 h-5.5 text-white" />
                 </div>
 
                 {/* Content */}
@@ -115,18 +117,11 @@ export default function ProgramCategories() {
                 {/* CTA */}
                 <Link
                   href={program.href}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-700 group/link"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-700 hover:text-blue-800 group/link"
                 >
-                  Explore Program
-                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform" />
+                  Learn More
+                  <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
                 </Link>
-
-                {/* Hover gradient overlay */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    background: "linear-gradient(135deg, rgba(59,130,246,0.03) 0%, transparent 100%)"
-                  }}
-                />
               </motion.div>
             );
           })}

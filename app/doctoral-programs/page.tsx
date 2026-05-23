@@ -43,7 +43,7 @@ export default function DoctoralProgramsPage() {
     <>
       {/* Hero */}
       <section className="relative bg-[#0F172A] pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 mesh-gradient opacity-40" />
+        
         <div className="container-wide relative z-10 max-w-3xl">
           <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold mb-6">
             Doctoral Programs

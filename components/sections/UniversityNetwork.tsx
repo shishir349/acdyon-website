@@ -65,9 +65,11 @@ export default function UniversityNetwork() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-4 border border-blue-100">
-            University Network
-          </span>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-0.5 bg-[#B8952A]" />
+            <span className="text-[#B8952A] text-xs font-bold tracking-widest uppercase">University Network</span>
+            <div className="w-8 h-0.5 bg-[#B8952A]" />
+          </div>
           <h2 className="text-4xl lg:text-5xl font-heading text-slate-900 mb-4 leading-tight">
             Globally{" "}
             <span className="text-gradient-blue">Accredited</span>{" "}

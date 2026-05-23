@@ -63,22 +63,23 @@ const audiences = [
   },
 ];
 
+// All cards use a single clean institutional style
 const colorMap: Record<string, string> = {
-  blue: "bg-blue-50 border-blue-100 group-hover:border-blue-200",
-  indigo: "bg-indigo-50 border-indigo-100 group-hover:border-indigo-200",
-  slate: "bg-slate-50 border-slate-100 group-hover:border-slate-200",
-  violet: "bg-violet-50 border-violet-100 group-hover:border-violet-200",
-  cyan: "bg-cyan-50 border-cyan-100 group-hover:border-cyan-200",
-  yellow: "bg-yellow-50 border-yellow-100 group-hover:border-yellow-200",
+  blue: "bg-white border-slate-200 hover:border-blue-200",
+  indigo: "bg-white border-slate-200 hover:border-blue-200",
+  slate: "bg-white border-slate-200 hover:border-blue-200",
+  violet: "bg-white border-slate-200 hover:border-blue-200",
+  cyan: "bg-white border-slate-200 hover:border-blue-200",
+  yellow: "bg-white border-slate-200 hover:border-amber-200",
 };
 
 const iconColorMap: Record<string, string> = {
-  blue: "text-blue-600",
-  indigo: "text-indigo-600",
+  blue: "text-blue-700",
+  indigo: "text-blue-700",
   slate: "text-slate-600",
-  violet: "text-violet-600",
-  cyan: "text-cyan-600",
-  yellow: "text-yellow-600",
+  violet: "text-slate-700",
+  cyan: "text-blue-700",
+  yellow: "text-[#B8952A]",
 };
 
 export default function WhoIsThisFor() {
@@ -92,10 +93,12 @@ export default function WhoIsThisFor() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-sm font-semibold mb-4 border border-blue-100">
-            Who Is This For
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-heading text-slate-900 mb-4 leading-tight">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-0.5 bg-[#B8952A]" />
+            <span className="text-[#B8952A] text-xs font-bold tracking-widest uppercase">Who Is This For</span>
+            <div className="w-8 h-0.5 bg-[#B8952A]" />
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-heading text-[#0F172A] mb-4 leading-tight">
             Built for the{" "}
             <span className="text-gradient-blue">Most Ambitious</span>
           </h2>

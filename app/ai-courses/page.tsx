@@ -48,18 +48,16 @@ export default function AICoursesPage() {
     <>
       {/* Hero */}
       <section className="relative bg-[#0F172A] pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 mesh-gradient opacity-50" />
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl" />
         <div className="container-wide relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-7">
               <div className="flex items-center gap-3">
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-semibold">
-                  <Zap className="w-3.5 h-3.5" />
-                  Flagship Program
-                </span>
-                <span className="px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-bold">
-                  ENROLLING NOW
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-0.5 bg-[#B8952A]" />
+                  <span className="text-[#B8952A] text-xs font-bold tracking-widest uppercase">Flagship Program</span>
+                </div>
+                <span className="px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-bold">
+                  ENROLLING
                 </span>
               </div>
               <h1 className="text-5xl lg:text-6xl font-heading text-white leading-tight">
